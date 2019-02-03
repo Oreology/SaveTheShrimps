@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:circular_progress_gauge_odo/odo.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
   
 class DissolvedOxygenGauge extends StatefulWidget {
   DissolvedOxygenGauge({Key key}) : super(key: key);
@@ -30,9 +31,24 @@ class _DissolvedOxygenGauge extends State<DissolvedOxygenGauge> {
                 _value = sliderInput;
               });
             }
+          ),
+          RaisedButton(
+            child: Text('Save the Shrimps'),
+            onPressed: storeValue,
+            color: Colors.lightBlueAccent,
+            textColor: Colors.white,
           )
         ],
       ),
     );
+  }
+
+  void storeValue() {
+    var batch = Firestore.instance.batch();
+
+    var valRef = Firestore.instance.collection('value').document('value');
+
+    batch.updateData(valRef, { 'value': _value });
+    batch.commit();
   }
 }
