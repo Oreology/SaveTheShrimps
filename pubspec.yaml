@@ -17,6 +17,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^0.1.2
   fluro: "^1.4.0"
+  charts_flutter: ^0.5.0
+  circular_progress_gauge_odo: ^1.0.0
 
 dev_dependencies:
   flutter_test:

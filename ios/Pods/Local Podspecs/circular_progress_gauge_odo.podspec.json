@@ -1,0 +1,26 @@
+{
+  "name": "circular_progress_gauge_odo",
+  "version": "0.0.1",
+  "summary": "Introducing the new &quot;odo&quot; widget in flutter. It simulates a odometer or a speedometer style gauge in mobile application.",
+  "description": "Introducing the new &quot;odo&quot; widget in flutter. It simulates a odometer or a speedometer style gauge in mobile application.",
+  "homepage": "http://example.com",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Your Company": "email@example.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "public_header_files": "Classes/**/*.h",
+  "dependencies": {
+    "Flutter": [
+
+    ]
+  },
+  "platforms": {
+    "ios": "8.0"
+  }
+}
